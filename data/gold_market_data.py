@@ -56,7 +56,7 @@ def load_dataset(start: str = "2025-01-01", end: str | None = None) -> pd.DataFr
     return df
 
 
-def get_market_data(date) -> str | None:
+def get_market_summary(date) -> str | None:
     """
     Returns a natural-language summary of the most recent trading day's data.
     Kept for backward compatibility with main.py and research_agent.py.

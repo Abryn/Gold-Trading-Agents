@@ -1,9 +1,9 @@
 from datetime import date
-from data.gold_market_data import get_market_data
+from data.gold_market_data import get_market_summary
 from agents.research_agent import research_agent
 
 if __name__ == "__main__":
-    summary = get_market_data(date.today())
+    summary = get_market_summary(date.today())
     print(summary)
     
     if summary:
