@@ -10,9 +10,9 @@ class LLMStrategy(BaseStrategy):
     LLM-assisted trading strategy using the multi-agent pipeline.
 
     Routes each trading day through three sequential agents:
-        1. gold_analyst_agent   — analyses raw OHLCV data and produces a market assessment
-        2. risk_agent           — evaluates trade risk based on the market assessment
-        3. trade_decision_agent — combines both outputs and returns BUY, SELL, or HOLD
+        1. gold_analyst_agent   - analyses raw OHLCV data and produces a market assessment
+        2. risk_agent           - evaluates trade risk based on the market assessment
+        3. trade_decision_agent - combines both outputs and returns BUY, SELL, or HOLD
 
     The temperature parameter is passed to all three agents and acts as the
     independent variable in the experiment.

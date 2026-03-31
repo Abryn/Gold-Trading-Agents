@@ -28,7 +28,7 @@ class BaseStrategy(ABC):
         """
         Called once before the backtesting loop with the full DataFrame.
 
-        Optional hook — default is no-op. Used by stateful strategies (e.g. MACD)
+        Optional hook: default is no-op. Used by stateful strategies (e.g. MACD)
         to reset internal state between runs, and by the LLM strategy to store
         a reference to the full DataFrame for lookback windowing.
 
