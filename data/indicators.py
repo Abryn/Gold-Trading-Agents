@@ -18,7 +18,7 @@ def compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     close = cast(pd.Series, df["Close"].squeeze())
 
-    # --- RSI (14-period, Wilder's smoothing) ---
+    # RSI (14-period, Wilder's smoothing)
     delta = close.diff()
     gain = delta.clip(lower=0)
     loss = -delta.clip(upper=0)
@@ -27,14 +27,14 @@ def compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     rs = avg_gain / avg_loss
     df["rsi_14"] = 100 - (100 / (1 + rs))
 
-    # --- MACD (12/26/9) ---
+    # MACD (12/26/9)
     ema12 = close.ewm(span=12, adjust=False).mean()
     ema26 = close.ewm(span=26, adjust=False).mean()
     df["macd_line"]   = ema12 - ema26
     df["macd_signal"] = df["macd_line"].ewm(span=9, adjust=False).mean()
     df["macd_hist"]   = df["macd_line"] - df["macd_signal"]
 
-    # --- Bollinger Bands (20-period SMA, 2 standard deviations) ---
+    # Bollinger Bands (20-period SMA, 2 standard deviations) 
     sma20 = close.rolling(window=20).mean()
     std20 = close.rolling(window=20).std()
     df["bb_middle"] = sma20
