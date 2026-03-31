@@ -12,7 +12,7 @@ def load_dataset(start: str = "2025-01-01", end: str | None = None) -> pd.DataFr
     Downloads the full historical GC=F (gold futures) dataset, computes technical
     indicators, drops NaN warm-up rows, and returns the augmented DataFrame.
 
-    Results are cached in memory — repeated calls with the same (start, end)
+    Results are cached in memory, repeated calls with the same (start, end)
     return the cached copy instantly without hitting Yahoo Finance again.
 
     Columns returned:
