@@ -27,8 +27,8 @@ using historical gold market data.
 4. Run the backtest (see usage segment)
 
 ## Usage
-python main.py (~3h runtime)
-python main.py --dev (~1h runtime)
+- python main.py (~3h runtime)
+- python main.py --dev (~1h runtime)
 
 Note: This project was developed on Python 3.14.3. 
 Compatibility with earlier versions is not guaranteed.
