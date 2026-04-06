@@ -1,13 +1,12 @@
 import yfinance as yf
 import pandas as pd
-from datetime import date
 from data.indicators import compute_indicators
 
 # Module-level cache: keyed by (start, end) to avoid re-downloading
 _cache: dict[tuple, pd.DataFrame] = {}
 
 
-def load_dataset(start: str = "2025-01-01", end: str | None = None) -> pd.DataFrame:
+def load_dataset(start: str = "2025-01-01", end: str = "2026-04-01") -> pd.DataFrame:
     """
     Downloads the full historical GC=F (gold futures) dataset, computes technical
     indicators, drops NaN warm-up rows, and returns the augmented DataFrame.
@@ -23,11 +22,8 @@ def load_dataset(start: str = "2025-01-01", end: str | None = None) -> pd.DataFr
 
     Args:
         start: Start date string, e.g. "2025-01-01"
-        end:   End date string, e.g. "2026-03-23". Defaults to today if None.
+        end:   End date string. Hardcoded to "2026-04-01" to ensure a consistent dataset across all runs.
     """
-    if end is None:
-        end = date.today().isoformat()
-
     cache_key = (start, end)
     if cache_key in _cache:
         return _cache[cache_key]
