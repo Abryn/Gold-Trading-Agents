@@ -10,7 +10,7 @@ using historical gold market data.
   
 ## Requirements
 - [Python 3.14.3](https://www.python.org/downloads/release/python-3143/)
-- Ollama (see installation step 3)
+- Ollama (see installation step 2)
   
 ## Installation
 1. Clone the repository
