@@ -20,7 +20,10 @@ using historical gold market data.
 2. Install and start Ollama  
    - Download and install Ollama from https://ollama.com/download
    - Restart your terminal after installation
-   - ollama pull llama3.1:8b
+   - ollama pull llama3.1:8b  
+   Note llama3.1:8b requires ~5GB of disk space and a capable GPU.  
+   If your hardware is limited, consider a smaller model such as ollama3.2:1b,  
+   though results may differ.
 
 3. Install dependencies
    * Add Python to PATH during installation for the pip3 command to work
