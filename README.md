@@ -29,7 +29,7 @@ using historical gold market data.
 4. Run the agent test & then backtest (see usage segment)
 
 ## Usage
-* Verify that Ollama works and then run the backtest, add --dev for a quicker runtime
+Verify that Ollama works and then run the backtest, add --dev for a quicker runtime
 - python test_agents.py (~1m runtime)
 - python main.py (~3h runtime)
 - python main.py --dev (~1h runtime)
