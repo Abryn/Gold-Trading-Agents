@@ -38,6 +38,7 @@ def run_strategy(strategy, df: pd.DataFrame) -> dict:
     averaged = runs[-1].copy()
     for metric in AVERAGED_METRICS:
         averaged[metric] = round(sum(r[metric] for r in runs) / NUM_LLM_RUNS, 4)
+    averaged["trade_count"] = int(round(sum(len(r["trades"]) for r in runs) / NUM_LLM_RUNS))
     return averaged
 
 
@@ -69,7 +70,7 @@ def main(dev: bool = False):
         "Max Drawdown %": r["max_drawdown"],
         "Sharpe Ratio":  r["sharpe_ratio"],
         "Expectancy":    r["expectancy"],
-        "# Trades":      len(r["trades"]),
+        "# Trades":      r.get("trade_count", len(r["trades"])),
     } for r in results])
 
     print(summary.to_string(index=False))
