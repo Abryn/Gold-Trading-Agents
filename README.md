@@ -18,12 +18,12 @@ using historical gold market data.
    - cd Gold-Trading-Agents
   
 2. Install and start Ollama  
-   https://ollama.com/download
-   * After installation, restart your terminal properly for the ollama command to work
+   - Download and install Ollama from https://ollama.com/download
+   - Restart your terminal after installation
    - ollama pull llama3.1:8b
 
 3. Install dependencies
-   * Add Python to PATH during installation for the pip3 command to work (if missed add it by updating your environment variables)
+   * Add Python to PATH during installation for the pip3 command to work
    - pip3 install -r requirements.txt
 
 4. Run the agent test & then backtest (see usage segment)
