@@ -14,7 +14,7 @@ using historical gold market data.
   
 ## Installation
 1. Clone the repository
-   git clone https://github.com/Abryn/Gold-Trading-Agents.git
+   git clone https://github.com/Abryn/Gold-Trading-Agents.git  
    cd Gold-Trading-Agents
 
 2. Install dependencies
