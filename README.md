@@ -17,11 +17,11 @@ using historical gold market data.
    git clone https://github.com/Abryn/Gold-Trading-Agents.git  
    cd Gold-Trading-Agents
 
-2. Install dependencies
+2. Install dependencies  
    pip3 install -r requirements.txt
 
-3. Install and start Ollama
-   https://ollama.com/download
+3. Install and start Ollama  
+   https://ollama.com/download  
    ollama pull llama3.1:8b
 
 4. Run the backtest (see usage segment)
