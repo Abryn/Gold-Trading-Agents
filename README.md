@@ -33,7 +33,8 @@ Verify that Ollama works and then run the backtest, add --dev for a quicker runt
 - python test_agents.py (~1m runtime)
 - python main.py (~3h runtime)
 - python main.py --dev (~1h runtime)
-* Note: You can change the runtime of dev mode by updating DEV_MODE_ROWS in main.py
+
+Note: You can change the runtime of dev mode by updating DEV_MODE_ROWS in main.py  
 
 Note: This project was developed on Python 3.14.3. 
 Compatibility with earlier/later versions is not guaranteed.
