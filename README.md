@@ -20,8 +20,8 @@ using historical gold market data.
 2. Install and start Ollama  
    - Download and install Ollama from https://ollama.com/download
    - Restart your terminal after installation
-   - ollama pull llama3.1:8b  
-   Note llama3.1:8b requires ~5GB of disk space and a capable GPU.  
+   - ollama pull llama3.1:8b
+   - Note llama3.1:8b requires ~5GB of disk space and a capable GPU.  
    If your hardware is limited, consider a smaller model such as ollama3.2:1b,  
    though results may differ.
 
@@ -34,8 +34,8 @@ using historical gold market data.
 ## Usage
 Verify that Ollama works and then run the backtest, add --dev for a quicker runtime
 - python test_agents.py (~1m runtime)
-- python main.py (~3h runtime)
-- python main.py --dev (~1h runtime)
+- python main.py (~3h runtime, PS: will vary depending on hardware)
+- python main.py --dev (~1h runtime, PS: will vary depending on hardware)
 
 Note: You can change the runtime of dev mode by updating DEV_MODE_ROWS in main.py  
 
